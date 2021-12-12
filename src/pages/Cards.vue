@@ -155,7 +155,7 @@ export default defineComponent({
       boolcheck: ref(false),
       onRemove () {
         const arr = store.state.db.Cards
-        void fetch('http://localhost:3000/cards/' + `${arr[+slide.value - 1].id}`, {
+        void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards/' + `${arr[+slide.value - 1].id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
@@ -166,7 +166,7 @@ export default defineComponent({
       },
       onFreeze () {
         const arr = store.state.db.Cards
-        void fetch('http://localhost:3000/cards/' + `${arr[+slide.value - 1].id}`, {
+        void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards/' + `${arr[+slide.value - 1].id}`, {
           method: 'PATCH',
           body: JSON.stringify({
             status: !arr[+slide.value - 1].status
@@ -181,7 +181,7 @@ export default defineComponent({
         const newno = (Math.random() + 1).toString().substring(2, 20)
         const newcvv = (Math.random() + 1).toString().substring(2, 5)
         const expmonth = (Math.floor(Math.random() * (9 - 0)) + 0).toString()
-        await fetch('http://localhost:3000/cards', {
+        await fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards', {
           method: 'POST',
           body: JSON.stringify({
 

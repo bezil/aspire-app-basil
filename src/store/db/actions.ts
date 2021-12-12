@@ -8,7 +8,7 @@ import Transaction from 'src/types/transaction'
 const actions: ActionTree<DBInterface, StateInterface> = {
   fetchUser (/* context */{ commit }) {
     // your code
-    void fetch('http://localhost:3000/userdetail')
+    void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/userdetail')
       .then(res => res.json())
       .then(data => {
         const d = data as User
@@ -17,7 +17,7 @@ const actions: ActionTree<DBInterface, StateInterface> = {
   },
   fetchCards (/* context */{ commit }) {
     // your code
-    void fetch('http://localhost:3000/cards')
+    void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards')
       .then(res => res.json())
       .then(data => {
         const d = data as Card[]
@@ -26,7 +26,7 @@ const actions: ActionTree<DBInterface, StateInterface> = {
   },
   fetchTransactions (/* context */{ commit }) {
     // your code
-    void fetch('http://localhost:3000/transactions')
+    void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/transactions')
       .then(res => res.json())
       .then(data => {
         const d = data as Transaction[]
