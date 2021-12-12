@@ -1,0 +1,46 @@
+// app global css in SCSS form
+
+@font-face {
+    font-family: 'opensans-r';
+    src: url(../assets/fonts/opensans/OpenSans-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'opensans-b';
+    src: url(../assets/fonts/opensans/OpenSans-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: 'opensans-sb';
+    src: url(../assets/fonts/opensans/OpenSans-SemiBold.ttf);
+  }
+
+
+  body {
+    font-family: 'opensans-r';
+  }
+
+  /* Quasar Theme Changes */
+
+  // Carousel
+  .q-carousel{
+    height:unset !important;
+    background: transparent !important;
+  }
+  .q-carousel__navigation--bottom{
+    bottom:-6px !important;
+  }
+  .q-btn .q-icon, .q-btn .q-spinner{
+    font-size: 1.2em;
+  }
+  .q-carousel__navigation--bottom{
+    bottom:-6px !important;
+  }
+  .q-carousel__navigation .q-btn {
+    margin: 6px 4px;
+    padding: 5px;
+    font-size: 8px !important;
+  }
+  .q-carousel__navigation-icon--inactive{
+    opacity: 0.3 !important;
+  }
