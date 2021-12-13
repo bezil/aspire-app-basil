@@ -1,0 +1,58 @@
+{
+  "userdetail": {
+    "balance": "1,000",
+    "name": "Mark Henry"
+  },
+  "cards": [
+    {
+      "id": "9012244842122545",
+      "name": "Mark Henry",
+      "no": "9012244842122545",
+      "cvv": "603",
+      "expiry": "1112",
+      "status": true
+    },
+    {
+      "id": "7992752770725073",
+      "name": "Big Show",
+      "no": "7992752770725073",
+      "cvv": "667",
+      "expiry": "0727",
+      "status": true
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "merchant": "Hamsley",
+      "net": "refund",
+      "time": "20 May",
+      "amount": "150",
+      "img": "icons/file-storage.svg"
+    },
+    {
+      "id": "2",
+      "merchant": "Hamsley",
+      "net": "charged",
+      "time": "20 May",
+      "amount": "150",
+      "img": "icons/flights.svg"
+    },
+    {
+      "id": "3",
+      "merchant": "Hamsley",
+      "net": "charged",
+      "time": "20 May",
+      "amount": "150",
+      "img": "icons/megaphone.svg"
+    },
+    {
+      "id": "4",
+      "merchant": "Hamsley",
+      "net": "charged",
+      "time": "20 May",
+      "amount": "150",
+      "img": "icons/file-storage.svg"
+    }
+  ]
+}

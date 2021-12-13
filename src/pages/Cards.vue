@@ -120,6 +120,7 @@ import ExpansionItem from 'src/components/ExpansionItem.vue'
 import Card from 'src/components/Card.vue'
 import { useStore } from 'src/store'
 import { QCarousel } from 'quasar'
+import { JSON_API } from 'src/data/apilink'
 
 export default defineComponent({
   name: 'CardsPage',
@@ -155,7 +156,7 @@ export default defineComponent({
       boolcheck: ref(false),
       onRemove () {
         const arr = store.state.db.Cards
-        void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards/' + `${arr[+slide.value - 1].id}`, {
+        void fetch(`${JSON_API}/cards/${arr[+slide.value - 1].id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
@@ -166,7 +167,7 @@ export default defineComponent({
       },
       onFreeze () {
         const arr = store.state.db.Cards
-        void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards/' + `${arr[+slide.value - 1].id}`, {
+        void fetch(`${JSON_API}/cards/${arr[+slide.value - 1].id}`, {
           method: 'PATCH',
           body: JSON.stringify({
             status: !arr[+slide.value - 1].status
@@ -181,7 +182,7 @@ export default defineComponent({
         const newno = (Math.random() + 1).toString().substring(2, 20)
         const newcvv = (Math.random() + 1).toString().substring(2, 5)
         const expmonth = (Math.floor(Math.random() * (9 - 0)) + 0).toString()
-        await fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards', {
+        await fetch(`${JSON_API}/cards`, {
           method: 'POST',
           body: JSON.stringify({
 

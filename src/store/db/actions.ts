@@ -4,11 +4,12 @@ import { DBInterface } from './state'
 import User from 'src/types/user'
 import Card from 'src/types/card'
 import Transaction from 'src/types/transaction'
+import { JSON_API } from 'src/data/apilink'
 
 const actions: ActionTree<DBInterface, StateInterface> = {
   fetchUser (/* context */{ commit }) {
     // your code
-    void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/userdetail')
+    void fetch(`${JSON_API}/userdetail`)
       .then(res => res.json())
       .then(data => {
         const d = data as User
@@ -17,7 +18,7 @@ const actions: ActionTree<DBInterface, StateInterface> = {
   },
   fetchCards (/* context */{ commit }) {
     // your code
-    void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/cards')
+    void fetch(`${JSON_API}/cards`)
       .then(res => res.json())
       .then(data => {
         const d = data as Card[]
@@ -26,7 +27,7 @@ const actions: ActionTree<DBInterface, StateInterface> = {
   },
   fetchTransactions (/* context */{ commit }) {
     // your code
-    void fetch('https://my-json-server.typicode.com/bezil/aspire-app-db/transactions')
+    void fetch(`${JSON_API}/transactions`)
       .then(res => res.json())
       .then(data => {
         const d = data as Transaction[]
