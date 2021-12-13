@@ -72,7 +72,7 @@ export default {
     font-size: 9pt;
   }
   .q-tabs__content{
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   .q-tab--active{

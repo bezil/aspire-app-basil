@@ -1,1 +1,1 @@
-export const JSON_API = 'http://localhost:3000/cards'
+export const JSON_API = 'https://aspire-app-server.herokuapp.com/api'

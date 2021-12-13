@@ -20,7 +20,7 @@
             </TransactionDetail>
             </div>
           </q-card-section>
-          <div class="viewall--btn">
+          <div class="viewall--btn" v-if="!disabled">
               View all card transactions
           </div>
         </q-card>
