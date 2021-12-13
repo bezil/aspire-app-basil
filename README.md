@@ -2,6 +2,8 @@
 
 Mobile App created for Coding Challenge
 Note: App is optimized for Mobile View, please use Mobile view for better experience
+https://github.com/bezil/aspire-app-server/blob/master/preview.png
+
 
 ## Install the dependencies
 ```bash
